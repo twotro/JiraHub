@@ -1,0 +1,170 @@
+-----------------------------------
+--JiraHub No.1
+-----------------------------------
+
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
+
+local UI = Material.Load({
+     Title = "JiraHub - Project Upright (Very Buggy Rn)",
+     Style = 2,
+     SizeX = 400,
+     SizeY = 400,
+     Theme = "Dark"
+})
+
+local Page = UI.New({
+    Title = "Main"
+})
+
+Page.Toggle({
+    Text = "Auto-Punch",
+    Callback = function(autoPunch)
+        if autoPunch then
+            _G.punch = true do
+                spawn(function ()
+                    while _G.punch == true do
+                        local args = {
+                            [1] = "Punch",
+                            [2] = {}
+                        }                   
+                        game:GetService("ReplicatedStorage").Ability:FireServer(unpack(args))
+                        wait(0.1)
+                    end                  
+                end)
+            end
+        else
+            _G.punch = false do
+                spawn(function ()
+                    while _G.punch == false do
+                        wait(1)
+                  end
+                end)
+            end
+        end
+    end,
+    Enabled = false
+})
+--Tween Pick Arrow
+Page.Toggle({
+    Text = "AutoPick-Arrow",
+    Callback = function(autoPickArrow)
+        if autoPickArrow then
+            _G.autoPickArrow = true do
+                spawn(function ()
+                    while _G.autoPickArrow == true do
+                        local New_CFrame = game:GetService("Workspace")["Stand Arrow"].CFrame
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(3, Enum.EasingStyle.Linear)
+local tp = {CFrame = New_CFrame}
+ts:Create(part, ti, tp):Play()
+                        wait(0.1)
+                    end                  
+                end)
+            end
+        else
+            _G.autoPickArrow = false do
+                spawn(function ()
+                    while _G.autoPickArrow == false do
+                        wait(1)
+                  end
+                end)
+            end
+        end
+    end,
+    Enabled = false
+})
+--Tween Pick Rokakaka
+Page.Toggle({
+    Text = "AutoPick-Rokakaka",
+    Callback = function(autoPickRokakaka)
+        if autoPickRokakaka then
+            _G.autoPickRokakaka = true do
+                spawn(function ()
+                    while _G.autoPickRokakaka == true do
+                        local New_CFrame = game:GetService("Workspace")["Rokakaka"].CFrame
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(3, Enum.EasingStyle.Linear)
+local tp = {CFrame = New_CFrame}
+ts:Create(part, ti, tp):Play()
+                        wait(0.1)
+                    end                  
+                end)
+            end
+        else
+            _G.autoPickRokakaka = false do
+                spawn(function ()
+                    while _G.autoPickRokakaka == false do
+                        wait(1)
+                  end
+                end)
+            end
+        end
+    end,
+    Enabled = false
+})
+--Tween Pick Unusual Arrows
+Page.Toggle({
+    Text = "AutoPick-Unusual Arrow",
+    Callback = function(autoPickUnusual)
+        if autoPickUnusual then
+            _G.autoPickUnusual = true do
+                spawn(function ()
+                    while _G.autoPickUnusual == true do
+                        local New_CFrame = game:GetService("Workspace")["Unusual Arrow"].CFrame
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(3, Enum.EasingStyle.Linear)
+local tp = {CFrame = New_CFrame}
+ts:Create(part, ti, tp):Play()
+                        wait(0.1)
+                    end                  
+                end)
+            end
+        else
+            _G.autoPickUnusual = false do
+                spawn(function ()
+                    while _G.autoPickUnusual == false do
+                        wait(1)
+                  end
+                end)
+            end
+        end
+    end,
+    Enabled = false
+})
+--Tween Pick Requiem Arrows
+Page.Toggle({
+    Text = "AutoPick-Requiem Arrow",
+    Callback = function(autoPickRequiem)
+        if autoPickRequiem then
+            _G.autoPickRequiem = true do
+                spawn(function ()
+                    while _G.autoPickRequiem == true do
+                        local New_CFrame = game:GetService("Workspace")["Requiem Arrow"].CFrame
+local ts = game:GetService("TweenService")
+local char = game.Players.LocalPlayer.Character
+local part = char.HumanoidRootPart
+local ti = TweenInfo.new(3, Enum.EasingStyle.Linear)
+local tp = {CFrame = New_CFrame}
+ts:Create(part, ti, tp):Play()
+                        wait(0.1)
+                    end                  
+                end)
+            end
+        else
+            _G.autoPickRequiem = false do
+                spawn(function ()
+                    while _G.autoPickRequiem == false do
+                        wait(1)
+                  end
+                end)
+            end
+        end
+    end,
+    Enabled = false
+})
